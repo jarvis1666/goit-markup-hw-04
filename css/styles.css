@@ -1,0 +1,310 @@
+:root {
+  --color-base: #2e2f42;
+  --color-white: #ffffff;
+  --color-blue: #4d5ae5;
+  --color-text: #434455;
+  --color-team: #f4f4fd;
+  --color-ocean: #404bbf;
+  --color-cornflower: #e7e9fc;
+}
+/**/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+main {
+  flex-grow: 1;
+}
+/*глобальне обнулення стилів*/
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+ul {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 0;
+}
+/*Робимо зображення блочними елементами*/
+img {
+  display: block;
+  max-width: 100%;
+}
+/*базові стилі*/
+.base {
+  font-family: "Roboto", sans-serif;
+  color: var(--color-text);
+  background-color: var(--color-white);
+}
+/*дефолтні класи*/
+.container {
+  max-width: 1158px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+.list {
+  list-style-type: none;
+}
+.link {
+  text-decoration: none;
+}
+/*відступи в секціях*/
+.section {
+  padding: 120px 0;
+}
+/*прихований елемент*/
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+/*header*/
+.class-for-header {
+  border-bottom: 1px solid var(--color-cornflower);
+  background-color: var(--color-white);
+}
+.container-header {
+  display: flex;
+}
+.logo {
+  display: flex;
+  align-items: center;
+}
+.web {
+  font-family: "Raleway", sans-serif;
+  color: var(--color-blue);
+  text-transform: uppercase;
+  text-decoration: none;
+  font-weight: 800;
+  font-size: 18px;
+  line-height: 1.17;
+  letter-spacing: 0.03em;
+  margin-right: 76px;
+}
+.studio-header {
+  color: var(--color-base);
+  font-family: "Raleway", sans-serif;
+}
+.menu {
+  display: flex;
+  gap: 40px;
+}
+.navigation {
+  color: var(--color-base);
+  font-weight: 500;
+  line-height: 1.5;
+  list-style-type: none;
+  text-decoration: none;
+  letter-spacing: 0.02em;
+  padding: 24px 0;
+}
+.navigation:hover,
+.navigation:focus,
+.contacts:hover,
+.contacts:focus {
+  color: var(--color-ocean);
+}
+.addres {
+  font-style: normal;
+}
+.container-adress {
+  display: flex;
+  gap: 40px;
+  padding: 24px 0 24px 332px;
+}
+.contacts {
+  color: var(--color-text);
+  line-height: 1.5;
+  list-style-type: none;
+  text-decoration: none;
+  font-style: normal;
+  letter-spacing: 0.02em;
+}
+
+/*main*/
+/*Секція 1 "Hero image"*/
+
+.hero {
+  background-color: var(--color-base);
+  padding: 188px 0;
+}
+.hero-name {
+  color: var(--color-white);
+  font-size: 56px;
+  line-height: 1.07;
+  text-align: center;
+  letter-spacing: 0.02em;
+  max-width: 496px;
+  margin: 0 auto;
+  padding-bottom: 48px;
+}
+.but {
+  font-family: "Roboto", sans-serif;
+  cursor: pointer;
+  background-color: var(--color-blue);
+  color: var(--color-white);
+  font-weight: 500;
+  line-height: 1.5;
+  font-size: 16px;
+  letter-spacing: 0.04em;
+  display: block;
+  min-width: 169px;
+  height: 56px;
+  border: none;
+  border-radius: 4px;
+  margin: 0 auto;
+}
+.but:hover,
+.but:focus {
+  background-color: var(--color-ocean);
+}
+
+/*Секція 2 текст*/
+
+.container-quality {
+  display: flex;
+  gap: 24px;
+}
+.quality-list {
+  width: calc((100% - 72px) / 4);
+}
+.quality-name {
+  color: var(--color-base);
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 1.2;
+  letter-spacing: 0.02em;
+  margin-bottom: 8px;
+}
+
+.quality-text {
+  color: var(--color-text);
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+}
+
+/*Секція 3  Картинки*/
+.images {
+  padding-bottom: 120px;
+}
+.work-name {
+  color: var(--color-base);
+  font-size: 36px;
+  line-height: 1.11;
+  text-align: center;
+  letter-spacing: 0.02em;
+  text-transform: capitalize;
+  margin-bottom: 72px;
+}
+.container-images {
+  display: flex;
+  gap: 24px;
+}
+.images-list {
+  width: calc((100% - 48px) / 3);
+}
+
+/*Секція 4 команда (класи work-name   quality-name   quality-text використовуються з попереднього )*/
+.team {
+  background-color: var(--color-team);
+}
+.container-team {
+  display: flex;
+  gap: 24px;
+}
+.team-section {
+  background-color: var(--color-white);
+  width: calc((100% - 72px) / 4);
+  border-radius: 0px 0px 4px 4px;
+}
+.team-techskill {
+  padding: 32px 0;
+}
+.people-name {
+  text-align: center;
+  margin-bottom: 8px;
+}
+.people-skill {
+  text-align: center;
+}
+
+/*footer*/
+/* клас web використовєується з header*/
+.foter {
+  background-color: var(--color-base);
+  padding: 100px 0;
+}
+.logo-footer {
+  display: inline-block;
+  margin-bottom: 16px;
+}
+.studio-footer {
+  color: var(--color-team);
+  font-family: "Raleway", sans-serif;
+}
+.text-footer {
+  color: var(--color-team);
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  max-width: 264px;
+}
+.section-porfolio {
+  padding-top: 96px;
+  padding-bottom: 120px;
+}
+.container-button {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+  margin-bottom: 72px;
+}
+/*portfolio-main*/
+.button-portfolio {
+  background-color: var(--color-team);
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  color: var(--color-blue);
+  cursor: pointer;
+  font-weight: 500;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  padding: 12px 24px;
+  border: 1px solid var(--color-cornflower);
+  border-radius: 4px;
+}
+.button-portfolio:focus,
+.button-portfolio:hover {
+  background-color: var(--color-ocean);
+  color: var(--color-white);
+  border: 1px solid transparent;
+}
+.portfolio-images {
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 24px;
+  row-gap: 48px;
+}
+.portfolio-images-list {
+  width: calc((100% - 48px) / 3);
+}
+.portfolio-images-name {
+  padding: 32px 16px;
+  border: 1px solid var(--color-cornflower);
+  border-top: none;
+  margin-bottom: 8px;
+}
