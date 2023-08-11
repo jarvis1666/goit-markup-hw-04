@@ -25,7 +25,9 @@
             >Web<span class="studio-header">Studio</span></a
           >
           <ul class="list menu">
-            <li><a class="navigation link" href="./index.html">Studio</a></li>
+            <li class="navigation-active">
+              <a class="navigation link" href="./index.html">Studio</a>
+            </li>
             <li>
               <a class="navigation link" href="./portfolio.html">Portfolio</a>
             </li>
@@ -56,7 +58,20 @@
             Effective Solutions <br />
             for Your Business
           </h1>
-          <button class="but" type="button">Order Service</button>
+          <button data-modal-open class="but" type="button">
+            Order Service
+          </button>
+          <!--модальне вікно-->
+          <div data-modal class="backdrop is-hidden">
+            <div class="modal-win">
+              <p>jyhyh</p>
+              <button class="but-close" data-modal-close type="button">
+                <svg class="" width="8" height="8">
+                  <use href="./images/icons.svg#icon-close"></use>
+                </svg>
+              </button>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -297,48 +312,36 @@
       <!--Section 5-->
       <section class="section container">
         <h2 class="work-name">Customers</h2>
-        <ul class="list container-quality">
-          <li>
-            <div class="customers-fon">
-              <svg class="customers-icons" width="104" height="56">
-                <use href="./images/icons.svg#icon-Logo1"></use>
-              </svg>
-            </div>
+        <ul class="list container-quality-icons">
+          <li class="customers-fon">
+            <svg class="customers-icons" width="104" height="56">
+              <use href="./images/icons.svg#icon-Logo1"></use>
+            </svg>
           </li>
-          <li>
-            <div class="customers-fon">
-              <svg class="customers-icons" width="104" height="56">
-                <use href="./images/icons.svg#icon-Logo2"></use>
-              </svg>
-            </div>
+          <li class="customers-fon">
+            <svg class="customers-icons" width="104" height="56">
+              <use href="./images/icons.svg#icon-Logo2"></use>
+            </svg>
           </li>
-          <li>
-            <div class="customers-fon">
-              <svg class="customers-icons" width="104" height="56">
-                <use href="./images/icons.svg#icon-Logo3"></use>
-              </svg>
-            </div>
+          <li class="customers-fon">
+            <svg class="customers-icons" width="104" height="56">
+              <use href="./images/icons.svg#icon-Logo3"></use>
+            </svg>
           </li>
-          <li>
-            <div class="customers-fon">
-              <svg class="customers-icons" width="104" height="56">
-                <use href="./images/icons.svg#icon-loggo4"></use>
-              </svg>
-            </div>
+          <li class="customers-fon">
+            <svg class="customers-icons" width="104" height="56">
+              <use href="./images/icons.svg#icon-loggo4"></use>
+            </svg>
           </li>
-          <li>
-            <div class="customers-fon">
-              <svg class="customers-icons" width="104" height="56">
-                <use href="./images/icons.svg#icon-Logo5"></use>
-              </svg>
-            </div>
+          <li class="customers-fon">
+            <svg class="customers-icons" width="104" height="56">
+              <use href="./images/icons.svg#icon-Logo5"></use>
+            </svg>
           </li>
-          <li>
-            <div class="customers-fon">
-              <svg class="customers-icons" width="104" height="56">
-                <use href="./images/icons.svg#icon-Logo6"></use>
-              </svg>
-            </div>
+          <li class="customers-fon">
+            <svg class="customers-icons" width="104" height="56">
+              <use href="./images/icons.svg#icon-Logo6"></use>
+            </svg>
           </li>
         </ul>
       </section>
@@ -382,5 +385,6 @@
         </div>
       </section>
     </footer>
+    <script src="./js/modal.js"></script>
   </body>
 </html>
