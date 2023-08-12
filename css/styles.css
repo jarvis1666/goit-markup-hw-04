@@ -82,6 +82,8 @@ img {
 .class-for-header {
   border-bottom: 1px solid var(--color-cornflower);
   background-color: var(--color-white);
+  box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08),
+    0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08);
 }
 .container-header {
   display: flex;
@@ -134,11 +136,14 @@ img {
 .navigation::after {
   content: "";
   position: absolute;
-  bottom: 2px;
+  bottom: -1px;
   left: 0;
   width: 100%;
   height: 4px;
   border-radius: 2px;
+}
+.current {
+  color: var(--color-ocean);
 }
 .navigation.current::after {
   background-color: var(--color-ocean);
@@ -180,6 +185,7 @@ img {
   background-repeat: no-repeat;
   margin: 0 auto;
   background-position: center;
+  background-size: cover;
 }
 .hero-name {
   color: var(--color-white);
@@ -232,7 +238,7 @@ img {
   justify-content: center;
   border-radius: 4px;
   height: 112px;
-  padding-bottom: 8px;
+  margin-bottom: 8px;
 }
 
 .quality-name {
@@ -253,7 +259,7 @@ img {
   display: flex;
   gap: 24px;
   justify-content: center;
-  padding-bottom: 32px;
+  /*padding: 32px 0;*/
 }
 .social-contact-fone {
   background-color: var(--color-blue);
@@ -314,7 +320,7 @@ img {
     0px 1px 6px 0px rgba(46, 47, 66, 0.08);
 }
 .team-techskill {
-  padding: 32px 0 8px 0;
+  padding: 32px 0;
 }
 .people-name {
   text-align: center;
