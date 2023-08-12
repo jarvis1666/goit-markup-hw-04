@@ -259,7 +259,7 @@ img {
   display: flex;
   gap: 24px;
   justify-content: center;
-  /*padding: 32px 0;*/
+  
 }
 .social-contact-fone {
   width: 40px;
@@ -341,10 +341,7 @@ img {
 }
 .customers-fon {
   width: calc((100%-120px) / 6);
-  height: 88px; /*
-  transition-property: border;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);*/
+  height: 88px;  
 }
 .customers-link{
 width: 100%;
@@ -355,13 +352,11 @@ display: flex;
 align-items: center;
 justify-content: center;
 color: var(--color-customers);
+transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .customers-icons {
   fill: currentColor;
-  /*margin: 16px 32px;
-  transition-property: fill;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);*/
+
 }
 .customers-link:hover,
 .customers-link:focus{
@@ -520,11 +515,6 @@ color: var(--color-ocean);
 
 /*модальне вікно*/
 
-.is-hidden {
-  visibility: hidden;
-  opacity: 0;
-  pointer-events: none;
-}
 .backdrop {
   position: fixed;
   top: 0;
@@ -535,45 +525,51 @@ color: var(--color-ocean);
 
   transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
+.is-hidden {
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
+}
 .modal {
   position: absolute;
   top: 50%;
   left: 50%;
+  transform: translate(-50%, -50%) scale(1);
   width: 408px;
   min-height: 584px;
   background: var(--color-diary);
   border-radius: 4px;
-  box-shadow:  0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 2px 1px rgba(0, 0, 0, 0.2);;
-  transform: translate(-50%, -50%);
+  box-shadow:  0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 2px 1px rgba(0, 0, 0, 0.2);
+  
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .modal-but {
   position: absolute;
-  right: 24px;
   top: 24px;
+  right: 24px;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  cursor: pointer;
   background-color: var(--color-cornflower);
-  border-radius: 50%;
   border: 1px solid rgba(0, 0, 0, 0.1);
   padding: 0;
-  width: 24px;
-  height: 24px;
+  cursor: pointer;
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.modal-but-icon {
-  fill: var(--color-base);
-  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1); 
-}
-.modal-but-icon:hover,
-.modal-but-icon:focus{
-  fill: var(--color-white);
 }
 .modal-but:focus,
 .modal-but:hover{
   background-color: var(--color-ocean);
   border: none;
+}
+.modal-but-icon {
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1); 
+}
+
+.modal-but-icon:focus,
+.modal-but-icon:hover, .modal-but:focus,
+.modal-but:hover{
+  fill: var(--color-white);
 }
