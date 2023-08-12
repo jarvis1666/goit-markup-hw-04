@@ -8,6 +8,7 @@
   --color-cornflower: #e7e9fc;
   --color-customers: #8e8f99;
   --color-green: #31d0aa;
+  --color-diary: #fcfcfc;
 }
 /**/
 *,
@@ -110,13 +111,14 @@ img {
   gap: 40px;
 }
 .navigation {
+  position: relative;
   color: var(--color-base);
   font-weight: 500;
   line-height: 1.5;
   list-style-type: none;
   text-decoration: none;
   letter-spacing: 0.02em;
-  padding: 24px 0 0 0;
+  padding: 24px 0;
   display: inline-block;
   transition-property: color;
   transition-duration: 250ms;
@@ -128,17 +130,19 @@ img {
 .contacts:focus {
   color: var(--color-ocean);
 }
-.navigation-active::after {
+
+.navigation::after {
   content: "";
-  display: block;
+  position: absolute;
+  bottom: 2px;
+  left: 0;
   width: 100%;
   height: 4px;
   border-radius: 2px;
-  background-color: var(--color-ocean);
-  margin-top: 20px;
-  color: var(--color-ocean);
 }
-
+.navigation.current::after {
+  background-color: var(--color-ocean);
+}
 .addres {
   font-style: normal;
   margin-left: auto;
@@ -484,6 +488,9 @@ img {
 .portfolio-images-list:focus .overlay {
   transform: translateY(0);
 }
+
+/*модальне вікно*/
+
 .is-hidden {
   visibility: hidden;
   opacity: 0;
@@ -500,12 +507,31 @@ img {
   transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1) opacity 250ms
     cubic-bezier(0.4, 0, 0.2, 1);
 }
-.modal-win {
+.modal {
   position: absolute;
-  left: auto;
-  right: auto;
+  top: 50%;
+  left: 50%;
   width: 408px;
   min-height: 584px;
-  transform: translate(-50%, -50%), scale(1);
-  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  background: var(--color-diary);
+  border-radius: 4px;
+  transform: translate(-50%, -50%);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1) scal(1);
+}
+.modal-but {
+  position: absolute;
+  right: 24px;
+  top: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--color-cornflower);
+  border-radius: 50%;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  padding: 0;
+  width: 24px;
+  height: 24px;
+}
+.modal-but-icon {
+  fill: var(--color-base);
 }
